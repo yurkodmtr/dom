@@ -9,12 +9,18 @@
 @import '../fonts/font-awesome/css/font-awesome.css'
 
 // reset
-meyer-reset()
+meyer-reset() 
 *
   box-sizing(border-box) 
   input, textarea
   	border none
   	outline none
+
+.clearfix
+	&:after
+		content ''
+		display block
+		clear both
 
 //typography
 h2
@@ -93,12 +99,12 @@ body
 		padding-top 0px
 		padding-bottom 0px
 .content
-	column(8.8/12)
+	column(9/12)
 	+below(desktop-cutoff)
 		stack()
 		margin-bottom rem(30px)
 .sidebar
-	column(3.2/12)
+	column(3/12)
 	+below(desktop-cutoff)
 		stack()
 
@@ -486,61 +492,159 @@ body
 				+below(mobile-cutoff)
 					padding-bottom rem(30px)
 
-// clients
-.clients
-	.item
-		margin-bottom rem(50px)
-		&:last-child
-			margin-bottom 0px
+//post
+.post
+	margin-bottom rem(50px)
+	&:last-child
+		margin-bottom 0px
+	clearfix()
+	figure
+		column(1/3)
+		margin-bottom rem(15px)
+		img
+			display block
+			width 100%
+		+below(mobile-cutoff)
+			stack()
+			margin-bottom rem(30px)
+	article		 					
+		a 
+			font-size rem(19px)
+			font-weight 700
+			text-decoration none
+			color black
+			margin-bottom rem(20px)
+			display inline-block
+		.descr			
+			font-size rem(14px)
+			line-height rem(18px)
+			font-weight 300
+	&__padding
 		article
-			clearfix()
-			figure
-				column(1/3)
-				img
-					display block
-					width 100%
-				+below(mobile-cutoff)
-					stack()
-					margin-bottom rem(30px)
-			div
-				column(2/3)
-				padding rem(10px 0px)
-				+below(mobile-cutoff)
-					stack()
-					padding 0px
-				font-size rem(14px)
-				line-height rem(18px)
-				font-weight 300
-
-//technics
-.technics
-	.item
-		margin-bottom rem(50px)
-		&:last-child
-			margin-bottom 0px
-		clearfix()
-		figure
-			column(1/3)
-			img
-				display block
-				width 100%
-			+below(mobile-cutoff)
-				stack()
-				margin-bottom rem(30px)
-		article
-			column(2/3)
-			+below(mobile-cutoff)
-				stack()
-			a 
-				font-size rem(19px)
-				font-weight 700
-				text-decoration none
-				color black
 			.descr
 				padding-top rem(20px)
-				font-size rem(14px)
-				line-height rem(18px)
-				font-weight 300
+				+below(tablet-cutoff)
+					padding-top 0px
+
+//additional_services
+.additional_services
+	.item
+		&__list
+			clearfix()
+			text-align center
+		width rem(165px)		
+		display inline-block
+		margin-right rem(110px)
+		&:last-child 
+			margin-right 0px
+		+below(desktop-cutoff) 
+			margin-right rem(50px) 
+		+below(tablet-cutoff) 
+			display block
+			margin 0 auto 50px auto!important
+			&:last-child 
+				margin-bottom 0px			
+		text-align center
+		text-decoration none
+		color black
+		&:hover
+			text-decoration underline
+		
+		figure
+			margin-bottom rem(20px)
+			height 165px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+
+			border-radius 50%
+			border 2px solid #f5f5f5
+			padding 1px
+			position relative
+			span
+				border 7px solid #f5f5f5
+				position absolute
+				left 1px
+				top 1px
+				width 159px
+				height 159px
+				border-radius 50%
+		.title
+			font-size rem(21px)
+			font-weight 700
+
+
+
+//partners
+.partners
+	.item
+		&__list
+			clearfix()
+		column(1/3, cycle: 3)
+		+below(mobile-cutoff)
+			stack()
+		background white
+		box-shadow(0px 3px 7px 0px rgba(0,0,0,0.15))			
+		margin-bottom rem(35px)
+		padding rem(15px)
+		figure
+			position relative
+			height rem(130px)
+		img
+			display block
+			max-width 100%
+			max-height 100%
+			position absolute
+			left 0px
+			top 0px
+			right 0px
+			bottom 0px
+			margin auto
+
+//documents
+.documents
+	.item
+		column(1/3, cycle: 3)
+		+below(tablet-cutoff) 
+			column(1/2, cycle: 2, uncycle: 3)
+		+below(mobile-cutoff)
+			stack()
+		background white
+		text-decoration none
+		&:hover
+			text-decoration underline
+		color black
+		box-shadow(0px 3px 7px 0px rgba(0,0,0,0.15))
+		margin-bottom rem(30px)
+		figure
+			background-position: center center;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			height rem(190px)
+			position relative
+			span
+				border 5px solid rgba(255,255,255,0.4)
+				border-bottom 0px
+				position absolute
+				left 0px
+				top 0px
+				width 100%
+				height 100%
+
+		article
+			padding rem(23px 34px 23px 34px)
+			+below(tablet-cutoff)
+				padding rem(20px)
+			div
+				font-size rem(15px)
+				line-height rem(22px)
+				font-weight 700
 
 
 
@@ -594,6 +698,7 @@ body
 //sidebar form
 .sidebar
 	.form
+		center(600px)
 		margin-bottom rem(22px)
 		.input
 			height rem(43px)

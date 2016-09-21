@@ -50,6 +50,12 @@ var hidePeloader = function(){
 $(window).load(function(){
     removePlaceholder();
     itemHeightFix($('.advantages .item__list .item'));
+    if ( $(window).width() >= 460 ) {
+         itemHeightFix($('.documents .item article div'));
+    } else {
+        $('.documents .item article div').css('height','auto');
+    }
+   
     headerSlideshow();
 
     hidePeloader();
@@ -57,4 +63,9 @@ $(window).load(function(){
 
 $(window).resize(function(){
     itemHeightFix($('.advantages .item__list .item'));
+    if ( $(window).width() >= 460 ) {
+         itemHeightFix($('.documents .item article div'));
+    } else {
+        $('.documents .item article div').css('height','auto');
+    }
 });
