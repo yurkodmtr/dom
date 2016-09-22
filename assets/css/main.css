@@ -379,6 +379,13 @@ body {
   filter: alpha(opacity=80);
   opacity: 0.8;
 }
+.map {
+  padding: 0.267rem;
+  background: #fff;
+}
+.map iframe {
+  width: 100% !important;
+}
 .mainheader__top {
   background: #ef1c23;
   padding: 0.6rem 0 0.667rem;
@@ -1448,6 +1455,99 @@ body {
   line-height: 1.467rem;
   font-weight: 700;
 }
+.contacts .content {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.66666666666666%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: relative;
+  left: 34.33333333333333%;
+}
+.contacts .content:before,
+.contacts .content:after {
+  content: '';
+  display: table;
+}
+.contacts .content:after {
+  clear: both;
+}
+.contacts .content:last-child {
+  margin-right: 0%;
+}
+.contacts .sidebar {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: relative;
+  left: -68.66666666666666%;
+}
+.contacts .sidebar:before,
+.contacts .sidebar:after {
+  content: '';
+  display: table;
+}
+.contacts .sidebar:after {
+  clear: both;
+}
+.contacts .sidebar:last-child {
+  margin-right: 0%;
+}
+.contacts__content:after,
+.contacts__content:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contacts__content .item__list {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 14.166666666666664%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.contacts__content .item__list:before,
+.contacts__content .item__list:after {
+  content: '';
+  display: table;
+}
+.contacts__content .item__list:after {
+  clear: both;
+}
+.contacts__content .item__list:last-child {
+  margin-right: 0%;
+}
+.contacts__content .map {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 82.83333333333334%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.contacts__content .map:before,
+.contacts__content .map:after {
+  content: '';
+  display: table;
+}
+.contacts__content .map:after {
+  clear: both;
+}
+.contacts__content .map:last-child {
+  margin-right: 0%;
+}
+.contacts__content .map iframe {
+  height: 38rem;
+}
 .sidebar {
   padding-top: 0.333rem;
 }
@@ -1541,12 +1641,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
-.sidebar .map {
-  padding: 0.267rem;
-  background: #fff;
-}
 .sidebar .map iframe {
-  width: 100% !important;
   height: 178px !important;
 }
 .pagefooter {

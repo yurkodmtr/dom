@@ -147,6 +147,13 @@ body
 		&:hover
 			opacity 0.8
 
+// map
+.map
+	padding rem(4px)
+	background white
+	iframe
+		width 100%!important
+
 // --------------------------------------------- header
 .mainheader
 	&__top
@@ -645,6 +652,26 @@ body
 				font-size rem(15px)
 				line-height rem(22px)
 				font-weight 700
+//contacts
+.contacts
+	.content
+		column(8/12)
+		shift(4/12)
+	.sidebar
+		column(4/12)
+		shift(-8/12)
+
+//contacts__content
+.contacts
+	&__content
+		clearfix();
+		.item__list
+			column(2/12)
+		.map
+			column(10/12)
+			iframe
+				height rem(570px)
+
 
 
 
@@ -716,10 +743,7 @@ body
 //sidebar map
 .sidebar
 	.map
-		padding rem(4px)
-		background white
 		iframe
-			width 100%!important
 			height 178px!important
 
 
