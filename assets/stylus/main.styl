@@ -502,7 +502,7 @@ body
 //post
 .post
 	margin-bottom rem(50px)
-	&:last-child
+	&:last-child:not(:first-child)
 		margin-bottom 0px
 	clearfix()
 	figure
@@ -532,6 +532,18 @@ body
 				padding-top rem(20px)
 				+below(tablet-cutoff)
 					padding-top 0px
+
+//post_detail
+.post_detail
+	strong
+		font-size rem(19px)
+		display block
+		font-weight 700
+		margin-bottom rem(19px)
+	p
+		font-size rem(14px)
+		line-height rem(18px)
+		margin-bottom rem(18px)
 
 //additional_services
 .additional_services
@@ -652,25 +664,75 @@ body
 				font-size rem(15px)
 				line-height rem(22px)
 				font-weight 700
+
+//card
+.card
+	img
+		max-width 100%
+
+
 //contacts
 .contacts
 	.content
 		column(8/12)
 		shift(4/12)
-	.sidebar
+		+below(tablet-cutoff)
+			stack()
+			unshift()
+	.sidebar 
 		column(4/12)
 		shift(-8/12)
+		+below(tablet-cutoff)
+			stack()
+			unshift()
 
 //contacts__content
 .contacts
 	&__content
 		clearfix();
 		.item__list
-			column(2/12)
+			clearfix()
+			column(3/12)
+			+below(desktop-cutoff)
+				stack()
+				margin-bottom rem(30px)
+			.item				
+				margin-bottom rem(25px)
+				+below(desktop-cutoff)
+					margin-bottom 0px
+					column(1/3)
+					+below(mobile-cutoff)
+						stack()
+						margin-bottom rem(30px)
+						&:last-child
+							margin-bottom 0px
+				&:last-child
+					margin-bottom 0px
+				figure
+					box-shadow(0px 3px 7px 0px rgba(0,0,0,0.15))
+					max-width rem(290px)
+					margin 0 auto
+					img
+						display block
+						width 100%
+						margin-bottom rem(10px)
+						border 1px solid white
+				.descr
+					text-align center;
+					font-size rem(13px)
+					span	
+						font-weight 700
+						font-size rem(14px)
+						display block
+						margin-bottom rem(4px)
 		.map
-			column(10/12)
+			column(9/12)
+			+below(desktop-cutoff)
+				stack()
 			iframe
 				height rem(570px)
+				+below(tablet-cutoff)
+					height rem(250px)
 
 
 
